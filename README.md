@@ -58,6 +58,25 @@ Both output a `GUIDER` and take the same `view` options.
 
 **Check that it works:** the image as it is reads as A, and the transformed image reads as B.
 
+### Example workflow
+
+[`workflows/anagrama_krea2.json`](workflows/anagrama_krea2.json) has two branches with the same seed and prompts (*"an oil painting of a snowy mountain village"* / *"an oil painting of a horse"*, `flip_vertical`):
+
+- **Top:** Krea 2 Turbo + **Anagrama Guider**.
+- **Bottom:** Krea 2 Raw + turbo LoRA + **Balance** (`weight_b 0.5`, `early_bias 0.05`).
+
+Both run at 1024×1024, 8 steps, CFG 1, euler / simple, and save view A plus the flipped view B. Disable the branch you don't need to save time and VRAM.
+
+Model files, from [Comfy-Org/Krea-2](https://huggingface.co/Comfy-Org/Krea-2):
+
+| File | Folder |
+|---|---|
+| `krea2_turbo_int8_convrot.safetensors` | `models/diffusion_models` |
+| `krea2_raw_bf16.safetensors` | `models/diffusion_models` |
+| `krea2_turbo_lora_rank_64_bf16.safetensors` | `models/loras` |
+| `qwen3vl_4b_fp8_scaled.safetensors` | `models/text_encoders` |
+| `qwen_image_vae.safetensors` | `models/vae` |
+
 ## Tips
 
 - Choose pairs whose shapes can double up: smoke and hair, trees and beards, roofs and hats.
