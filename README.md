@@ -8,7 +8,7 @@ A ComfyUI guider node for **visual anagrams**: images that read as one thing as 
 | ![](docs/oldman-landscape_A.jpg) | ![](docs/oldman-landscape_B.jpg) |
 | ![](docs/dog_A.jpg) | ![](docs/dog_B.jpg) |
 
-*Made with Krea 2 Raw + turbo LoRA.*
+*Made with Krea 2 Turbo and Krea 2 Raw + turbo LoRA: 1024×1024, `rotate_180`, 8 steps, CFG 1, euler / simple.*
 
 ## How it works
 
